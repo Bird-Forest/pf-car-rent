@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pf-car-rent/static/css/main.7acaea2f.css",
+    "main.js": "/pf-car-rent/static/js/main.07d3183d.js",
+    "index.html": "/pf-car-rent/index.html",
+    "main.7acaea2f.css.map": "/pf-car-rent/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/pf-car-rent/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
