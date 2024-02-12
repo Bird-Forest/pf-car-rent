@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/pf-car-rent/static/css/main.7acaea2f.css",
-    "main.js": "/pf-car-rent/static/js/main.a96a847d.js",
+    "main.js": "/pf-car-rent/static/js/main.482091e2.js",
     "index.html": "/pf-car-rent/index.html",
     "main.7acaea2f.css.map": "/pf-car-rent/static/css/main.7acaea2f.css.map",
-    "main.a96a847d.js.map": "/pf-car-rent/static/js/main.a96a847d.js.map"
+    "main.482091e2.js.map": "/pf-car-rent/static/js/main.482091e2.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.a96a847d.js"
+    "static/js/main.482091e2.js"
   ]
 }
