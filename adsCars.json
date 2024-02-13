@@ -1,6 +1,7 @@
 [
     {
         "id": 9582,
+        "comleted": false,
         "year": 2008,
         "make": "Buick",
         "model": "Enclave",
@@ -27,6 +28,7 @@
     },
     {
         "id": 9584,
+        "comleted": false,
         "year": 2019,
         "make": "Volvo",
         "model": "XC90",
@@ -53,6 +55,7 @@
     },
     {
         "id": 9586,
+        "comleted": false,
         "year": 2020,
         "make": "Volvo",
         "model": "XC60",
@@ -79,6 +82,7 @@
     },
     {
         "id": 9587,
+        "comleted": false,
         "year": 2006,
         "make": "HUMMER",
         "model": "H2",
@@ -105,6 +109,7 @@
     },
     {
         "id": 9590,
+        "comleted": false,
         "year": 2016,
         "make": "Subaru",
         "model": "Outback",
@@ -131,6 +136,7 @@
     },
     {
         "id": 9591,
+        "comleted": false,
         "year": 2010,
         "make": "Mitsubishi",
         "model": "Outlander",
@@ -158,6 +164,7 @@
     {
         "id": 9593,
         "year": 2014,
+        "comleted": false,
         "make": "Nissan",
         "model": "Pathfinder",
         "type": "SUV",
@@ -183,6 +190,7 @@
     },
     {
         "id": 9596,
+        "comleted": false,
         "year": 2009,
         "make": "Lincoln",
         "model": "Navigator L",
@@ -209,6 +217,7 @@
     },
     {
         "id": 9597,
+        "comleted": false,
         "year": 2000,
         "make": "GMC",
         "model": "Yukon Denali",
@@ -235,6 +244,7 @@
     },
     {
         "id": 9598,
+        "comleted": false,
         "year": 2007,
         "make": "Hyundai",
         "model": "Tucson",
@@ -261,6 +271,7 @@
     },
     {
         "id": 9583,
+        "comleted": false,
         "year": 2006,
         "make": "MINI",
         "model": "Convertible",
@@ -287,6 +298,7 @@
     },
     {
         "id": 9606,
+        "comleted": false,
         "year": 2007,
         "make": "Bentley",
         "model": "Azure",
@@ -313,6 +325,7 @@
     },
     {
         "id": 9612,
+        "comleted": false,
         "year": 2004,
         "make": "Mercedes-Benz",
         "model": "SL-Class",
@@ -339,6 +352,7 @@
     },
     {
         "id": 9616,
+        "comleted": false,
         "year": 2010,
         "make": "Aston Martin",
         "model": "DBS",
@@ -365,6 +379,7 @@
     },
     {
         "id": 9619,
+        "comleted": false,
         "year": 1996,
         "make": "Pontiac",
         "model": "Firebird",
@@ -391,6 +406,7 @@
     },
     {
         "id": 9629,
+        "comleted": false,
         "year": 2009,
         "make": "Lamborghini",
         "model": "Murcielago",
@@ -417,6 +433,7 @@
     },
     {
         "id": 9631,
+        "comleted": false,
         "year": 2011,
         "make": "Audi",
         "model": "A5",
@@ -443,6 +460,7 @@
     },
     {
         "id": 9634,
+        "comleted": false,
         "year": 2001,
         "make": "BMW",
         "model": "Z8",
@@ -469,6 +487,7 @@
     },
     {
         "id": 9655,
+        "comleted": false,
         "year": 1998,
         "make": "Chevrolet",
         "model": "Camaro",
@@ -495,6 +514,7 @@
     },
     {
         "id": 9685,
+        "comleted": false,
         "year": 2006,
         "make": "Mercedes-Benz",
         "model": "SLK-Class",
@@ -521,6 +541,7 @@
     },
     {
         "id": 9660,
+        "comleted": false,
         "year": 2020,
         "make": "Chrysler",
         "model": "Voyager",
@@ -547,6 +568,7 @@
     },
     {
         "id": 9630,
+        "comleted": false,
         "year": 2020,
         "make": "Kia",
         "model": "Rio",
@@ -573,6 +595,7 @@
     },
     {
         "id": 9586,
+        "comleted": false,
         "year": 2020,
         "make": "Volvo",
         "model": "XC60",
@@ -599,6 +622,7 @@
     },
     {
         "id": 9618,
+        "comleted": false,
         "year": 2020,
         "make": "Land Rover",
         "model": "Range Rover Sport",
@@ -625,6 +649,7 @@
     },
     {
         "id": 9630,
+        "comleted": false,
         "year": 2020,
         "make": "Kia",
         "model": "Rio",

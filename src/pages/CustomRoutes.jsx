@@ -9,14 +9,13 @@ const NotFound = lazy(() => import('pages/NotFoundPage'));
 
 export default function CustomRoutes() {
   return (
-    <>
     <Routes>
-      <Route path="/" element={<SharedLayout />}/>
+      <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
         <Route path="catalog" element={<Catalog />} />
         <Route path="favorites" element={<Favorites />} />
         <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
-  </>
-  )
+  );
 }

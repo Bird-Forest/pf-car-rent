@@ -1,5 +1,7 @@
-export const selectLoading = state => state.favorites.loading;
+export const selectLoading = state => state.cars.loading;
 
-export const selectError = state => state.favorites.error;
+export const selectError = state => state.cars.error;
 
-export const selectFavoritesCars = state => state.favorites.selectedCars;
+// export const selectFavorites = state => state.favorites.selectedCars;
+
+export const selectCatalog = state => state.cars.catalog;
