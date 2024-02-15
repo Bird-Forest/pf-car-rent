@@ -5,7 +5,7 @@ import { WrapNavigator } from './Pages.styled';
 export default function Navigator() {
   return (
     <WrapNavigator>
-      <NavLink to="" className="navigate" end>Home</NavLink>
+      <NavLink to="/" className="navigate">Home</NavLink>
       <NavLink to="/catalog" className="navigate">Catalog</NavLink>
       <NavLink to="/favorites" className="navigate">Favorites</NavLink>
     </WrapNavigator>

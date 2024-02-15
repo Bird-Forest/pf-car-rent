@@ -1,7 +1,8 @@
-import ListCars from '../components/ListCars'
-import React, { useEffect } from 'react'
+import ListCars from '../components/ListCars';
+import React, { useEffect } from 'react';
 import { fetchCatalog } from '../redux/server';
 import { useDispatch } from 'react-redux';
+// import FilterCars from '../components/FilterCars';
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
@@ -10,6 +11,9 @@ export default function CatalogPage() {
     dispatch(fetchCatalog());
   }, [dispatch]);
   return (
-    <div><ListCars /></div>
-  )
+    <div>
+      {/* <FilterCars /> */}
+      <ListCars />
+    </div>
+  );
 }

@@ -8,6 +8,7 @@ import {
 
 const initialState = {
   catalog: [],
+  selectedCars: [],
   isLoading: false,
   error: null,
 };
