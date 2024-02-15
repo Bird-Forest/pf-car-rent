@@ -1,27 +1,23 @@
 {
   "files": {
-    "main.css": "/pf-car-rent/static/css/main.4e14258c.css",
-    "main.js": "/pf-car-rent/static/js/main.04e4fd4b.js",
-    "static/js/309.885ef8f3.chunk.js": "/pf-car-rent/static/js/309.885ef8f3.chunk.js",
+    "main.css": "/pf-car-rent/static/css/main.17fb153a.css",
+    "main.js": "/pf-car-rent/static/js/main.402972c4.js",
     "static/js/983.281c73e2.chunk.js": "/pf-car-rent/static/js/983.281c73e2.chunk.js",
-    "static/js/699.77ef683d.chunk.js": "/pf-car-rent/static/js/699.77ef683d.chunk.js",
-    "static/js/697.c0dd1d01.chunk.js": "/pf-car-rent/static/js/697.c0dd1d01.chunk.js",
+    "static/js/821.f9b0625f.chunk.js": "/pf-car-rent/static/js/821.f9b0625f.chunk.js",
+    "static/js/764.c256d994.chunk.js": "/pf-car-rent/static/js/764.c256d994.chunk.js",
     "static/js/520.a12b8ccb.chunk.js": "/pf-car-rent/static/js/520.a12b8ccb.chunk.js",
-    "static/js/989.c392343f.chunk.js": "/pf-car-rent/static/js/989.c392343f.chunk.js",
-    "static/js/696.6dfc0a1b.chunk.js": "/pf-car-rent/static/js/696.6dfc0a1b.chunk.js",
+    "static/js/426.801850f4.chunk.js": "/pf-car-rent/static/js/426.801850f4.chunk.js",
     "index.html": "/pf-car-rent/index.html",
-    "main.4e14258c.css.map": "/pf-car-rent/static/css/main.4e14258c.css.map",
-    "main.04e4fd4b.js.map": "/pf-car-rent/static/js/main.04e4fd4b.js.map",
-    "309.885ef8f3.chunk.js.map": "/pf-car-rent/static/js/309.885ef8f3.chunk.js.map",
+    "main.17fb153a.css.map": "/pf-car-rent/static/css/main.17fb153a.css.map",
+    "main.402972c4.js.map": "/pf-car-rent/static/js/main.402972c4.js.map",
     "983.281c73e2.chunk.js.map": "/pf-car-rent/static/js/983.281c73e2.chunk.js.map",
-    "699.77ef683d.chunk.js.map": "/pf-car-rent/static/js/699.77ef683d.chunk.js.map",
-    "697.c0dd1d01.chunk.js.map": "/pf-car-rent/static/js/697.c0dd1d01.chunk.js.map",
+    "821.f9b0625f.chunk.js.map": "/pf-car-rent/static/js/821.f9b0625f.chunk.js.map",
+    "764.c256d994.chunk.js.map": "/pf-car-rent/static/js/764.c256d994.chunk.js.map",
     "520.a12b8ccb.chunk.js.map": "/pf-car-rent/static/js/520.a12b8ccb.chunk.js.map",
-    "989.c392343f.chunk.js.map": "/pf-car-rent/static/js/989.c392343f.chunk.js.map",
-    "696.6dfc0a1b.chunk.js.map": "/pf-car-rent/static/js/696.6dfc0a1b.chunk.js.map"
+    "426.801850f4.chunk.js.map": "/pf-car-rent/static/js/426.801850f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e14258c.css",
-    "static/js/main.04e4fd4b.js"
+    "static/css/main.17fb153a.css",
+    "static/js/main.402972c4.js"
   ]
 }
