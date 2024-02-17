@@ -7,9 +7,9 @@ export const fetchCatalog = createAsyncThunk(
   'cars/fetchAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('/cars');
+      const response = await axios.get('/cars?page=1&limit=12');
       console.log(response.data);
-      return response.data; 
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -20,9 +20,7 @@ export const addFavorite = createAsyncThunk(
   'cars/addFavorite',
   async (idCar, thunkAPI) => {
     try {
-      const response = await axios.put(`/cars/${idCar}`, {
-        completed: true
-      });
+      const response = await axios.put(`/cars/${idCar}`, { completed: true });
       console.log(response.data);
       return response.data;
     } catch (error) {
@@ -37,7 +35,7 @@ export const deleteFavorite = createAsyncThunk(
   async (idCar, thunkAPI) => {
     try {
       const response = await axios.put(`/cars/${idCar}`, {
-        completed: false
+        completed: false,
       });
       console.log(response.data);
       return response.data;
@@ -60,22 +58,3 @@ export const fetchFavorites = createAsyncThunk(
     }
   }
 );
-
-
-
-// export const toggleFavorite = createAsyncThunk(
-//   'cars/toggleFavorite',
-//   async (idCar, thunkAPI) => {
-//     try {
-//       const response = await axios.put(`/cars/${idCar}`, {
-//         completed: true,
-//       });
-//       console.log(response.data);
-//       return response.data;
-//     } catch (error) {
-//       console.error(error);
-//       // Обробка помилки
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );

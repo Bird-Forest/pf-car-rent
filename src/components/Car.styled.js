@@ -93,22 +93,22 @@ export const TextCard = styled.div`
   margin: 2px 0;
   /* word-break: break-all; */
   .text {
-  font-family: 'Manrope';
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: left;
-  color: rgba(18, 20, 23, 0.5);
-  padding: 0 4px;
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    color: rgba(18, 20, 23, 0.5);
+    padding: 0 4px;
   }
   .border {
     height: 16px;
     border-right: 2px solid rgba(18, 20, 23, 0.1);
   }
   .last {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 export const BtnCard = styled.button`
@@ -121,6 +121,8 @@ export const BtnCard = styled.button`
   line-height: 1.4;
   text-align: center;
   background-color: rgb(52, 112, 255);
+  border: none;
+  outline: rgb(52, 112, 255);
   color: rgb(255, 255, 255);
   cursor: pointer;
   &:hover,

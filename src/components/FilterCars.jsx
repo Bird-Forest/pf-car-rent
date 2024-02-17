@@ -1,7 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectCatalog } from '../redux/selectors';
-import { FilterBar, FilterForm, OptionForm, SelectForm } from './Filter.styled';
+import {
+  FilterBar,
+  FilterForm,
+  OptionForm,
+  SelectBrand,
+  SelectMileage,
+  SelectPrice,
+  TitleFilter,
+  WrapMileage,
+  WrapSelect,
+} from './Filter.styled';
+import { setBrand, setPrice } from '../redux/filterSlice';
 
 function getCategories(items, itemName) {
   if (!items) return [];
@@ -13,86 +24,83 @@ function getCategories(items, itemName) {
 
 export default function FilterCars() {
   const catalog = useSelector(selectCatalog);
-
   const brand = getCategories(catalog, 'make');
-  console.log(brand);
   const price = getCategories(catalog, 'rentalPrice');
-  console.log(price);
-
   const mileageFrom = [0, 2000, 4000, 6000, 8000];
   const mileageTo = [2000, 4000, 6000, 8000, 10000];
 
+  const dispatch = useDispatch();
+
   const handleOnChangeFilter = event => {
-    const key = event.target.name;
-    const value = event.target.value;
-    console.log({ [key]: value });
-    
-    // filterProducts(key, value);
+    let value = event.target.value;
+    if (event.target.name === 'brand') {
+      dispatch(setBrand(value));
+    }
+    if (event.target.name === 'price') {
+      dispatch(setPrice(value));
+    }
   };
+
   return (
     <FilterBar>
       <FilterForm>
-      <label>Car brand</label>
-        <SelectForm
-          id="brand"
-          name="brand"
-          value={brand || ''}
-          onChange={handleOnChangeFilter}
-        >
-            
-          <OptionForm value="">Enter the text</OptionForm>
-          {brand.map(option => (
-            <OptionForm key={option} value={option}>
-              {option}
-            </OptionForm>
-          ))}
-        </SelectForm>
+        <TitleFilter htmlFor="brand">Car brand</TitleFilter>
+        <WrapSelect>
+          <SelectBrand id="brand" name="brand" onChange={handleOnChangeFilter}>
+            <OptionForm value="">Enter the text</OptionForm>
+            {brand.map(option => (
+              <OptionForm key={option} value={option}>
+                {option}
+              </OptionForm>
+            ))}
+          </SelectBrand>
+        </WrapSelect>
       </FilterForm>
       <FilterForm>
-      <label>Price/ 1 hour</label>
-        <SelectForm
-          id="price"
-          name="price"
-          value={price || ''}
-          onChange={handleOnChangeFilter}
-        >
-          <OptionForm value="">To $</OptionForm>
-          {price.map(option => (
-            <OptionForm key={option} value={option}>
-              {option}'$'
-            </OptionForm>
-          ))}
-        </SelectForm>
+        <TitleFilter htmlFor="price">Price/ 1 hour</TitleFilter>
+        <WrapSelect>
+          <SelectPrice id="price" name="price" onChange={handleOnChangeFilter}>
+            <OptionForm value="">To$</OptionForm>
+            {price.map(option => (
+              <OptionForm key={option} value={option}>
+                {option}
+              </OptionForm>
+            ))}
+          </SelectPrice>
+        </WrapSelect>
       </FilterForm>
       <FilterForm>
-      <label>Сar mileage / km</label>
-        <SelectForm
-          id=" mileageFrom"
-          name=" mileageFrom"
-          value={ mileageFrom || ''}
-          onChange={handleOnChangeFilter}
-        >
-          <OptionForm value="">From</OptionForm>
-          { mileageFrom.map(option => (
-            <OptionForm key={option} value={option}>
-              {option}
-            </OptionForm>
-          ))}
-        </SelectForm>
-        <SelectForm
-          id="mileageTo"
-          name="mileageTo"
-          value={mileageTo || ''}
-          onChange={handleOnChangeFilter}
-        >
-          <OptionForm value="">To</OptionForm>
-          {mileageTo.map(option => (
-            <OptionForm key={option} value={option}>
-              {option}
-            </OptionForm>
-          ))}
-        </SelectForm>
+        <TitleFilter>Сar mileage / km</TitleFilter>
+        <WrapMileage>
+          <p className="text">From</p>
+          <SelectMileage
+            id=" mileageFrom"
+            name="mileageFrom"
+            onChange={handleOnChangeFilter}
+          >
+            {/* <OptionForm value="">From</OptionForm> */}
+            {mileageFrom.map(option => (
+              <OptionForm key={option} value={option}>
+                {option}
+              </OptionForm>
+            ))}
+          </SelectMileage>
+          <p className="text">To</p>
+          <SelectMileage
+            id="mileageTo"
+            name="mileageTo"
+            onChange={handleOnChangeFilter}
+          >
+            {/* <OptionForm value="">To</OptionForm> */}
+            {mileageTo.map(option => (
+              <OptionForm key={option} value={option}>
+                {option}
+              </OptionForm>
+            ))}
+          </SelectMileage>
+        </WrapMileage>
       </FilterForm>
+      <button>Search</button>
     </FilterBar>
   );
 }

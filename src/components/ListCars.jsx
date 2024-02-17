@@ -1,18 +1,26 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectCatalog } from '../redux/selectors';
+import React, { useEffect } from 'react';
+import { fetchCatalog } from '../redux/server';
+import { useDispatch } from 'react-redux';
+import { selectVisibleCars } from '../redux/selectors';
 import CarCard from './CarCard';
 import { nanoid } from '@reduxjs/toolkit';
 import { WrapListCars } from './Car.styled';
 
 export default function ListCars() {
-  const catalog = useSelector(selectCatalog);
+  const dispatch = useDispatch();
 
-  const Arr = Array.isArray(catalog) && catalog.length > 0;
+  useEffect(() => {
+    dispatch(fetchCatalog());
+  }, [dispatch]);
+
+  const newCars = useSelector(selectVisibleCars);
+
+  const Arr = Array.isArray(newCars) && newCars.length > 0;
   return (
     <WrapListCars>
       {Arr &&
-        catalog.map(item => {
+        newCars.map(item => {
           return <CarCard key={nanoid()} item={item} />;
         })}
     </WrapListCars>

@@ -24,19 +24,17 @@ export default function CarCard({ item }) {
   };
 
   const handleLikes = evt => {
+    console.log(evt.currentTarget.id);
     const idCar = Number(evt.currentTarget.id);
 
     if (!item.completed) {
+      console.log(item.completed);
       dispatch(addFavorite(idCar));
     } else {
       dispatch(deleteFavorite(idCar));
     }
   };
   let address = item.address.split(',');
-  // let myString = item.address;
-  // let address = myString.split(',');
-  // let country = address[address.length-1];
-  // let city = address[address.length-2];
 
   return (
     <>

@@ -1,6 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import { catalogReducer } from './carsSlice';
+import { filterReducer } from './filterSlice';
 import {
   persistStore,
   persistReducer,
@@ -12,17 +13,19 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-
 const carsPersistConfig = {
   key: 'cars',
   storage,
-  whitelist: ['catalog']
+  whitelist: ['catalog'],
 };
 
+const rootReducer = combineReducers({
+  cars: persistReducer(carsPersistConfig, catalogReducer),
+  filter: filterReducer,
+});
+
 export const store = configureStore({
-  reducer: {
-    cars: persistReducer(carsPersistConfig, catalogReducer),
-  },
+  reducer: rootReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

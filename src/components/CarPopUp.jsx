@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Backdrop,
   BtnClose,
@@ -15,17 +15,28 @@ import {
 import { IoCloseSharp } from 'react-icons/io5';
 
 export default function CarPopUp({ item, onClose }) {
-  // let myString = item.address;
-  // let address = myString.split(',');
-  // let country = address[address.length - 1];
-  // let city = address[address.length - 2];
+  useEffect(() => {
+    const handleEscape = event => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    // window.addEventListener('click', onClose);
+    window.addEventListener('keydown', handleEscape);
+
+    return () => {
+      // window.removeEventListener('click', onClose);
+      window.removeEventListener('keydown', handleEscape);
+    };
+  }, [onClose]);
+
   let address = item.address.split(',');
   let driver = item.rentalConditions.split('\n');
-  // let age =driver[driver.length 0]
-  // let license =driver[driver.length 1]
-  // let deposit =driver[driver.length 2]
+  let age = driver[0].split(':');
+
   return (
-    <Backdrop>
+    <Backdrop name="close">
       <WrapPopUp id={item.id}>
         <BtnClose type="button" id={item.id} onClick={onClose}>
           <IoCloseSharp className="close" />
@@ -68,20 +79,25 @@ export default function CarPopUp({ item, onClose }) {
         <WrapRent>
           <h5 className="title-rent">Rental Conditions:</h5>
           <div className="wrap-rent">
-            <p className="text-rent">{driver[0]}</p>
+            <p className="text-rent">
+              {age[0]}
+              <span className="blue">: {age[1]}</span>
+            </p>
             <p className="text-rent">{driver[1]}</p>
           </div>
           <div className="wrap-rent">
             <p className="text-rent last">{driver[2]}</p>
             <p className="text-rent">
-              Mileage:<span className="blue"> {item.mileage}</span>
+              Mileage<span className="blue">: {item.mileage}</span>
             </p>
             <p className="text-rent">
-              Price:<span className="blue"> {item.rentalPrice}</span>
+              Price<span className="blue">: {item.rentalPrice}</span>
             </p>
           </div>
         </WrapRent>
-        <BtnRent>Rental car</BtnRent>
+        <BtnRent>
+          <a href="tel:+380730000000">Rental car</a>
+        </BtnRent>
       </WrapPopUp>
     </Backdrop>
   );

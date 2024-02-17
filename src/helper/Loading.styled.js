@@ -7,7 +7,9 @@ export const LoaderWrap = styled.div`
   z-index: 90;
   width: 100%;
   height: 100%;
-  background-color: rgba(46, 47, 66, 0.4);
+  /* background-color: rgba(46, 47, 66, 0.4); */
+  background: rgba(18, 20, 23, 0.5);
+  backdrop-filter: blur(4px);
 `;
 
 export const Loader = styled.span`
@@ -15,7 +17,6 @@ export const Loader = styled.span`
   top: 300px;
   margin-left: auto;
   margin-right: auto;
-
   width: 175px;
   height: 80px;
   display: block;
@@ -42,7 +43,7 @@ export const Loader = styled.span`
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: #249fa3;
+    background-color: rgb(52, 112, 255);
     background-image: radial-gradient(
         circle 8px at 18px 18px,
         #fff 100%,
@@ -69,7 +70,7 @@ export const Loader = styled.span`
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #0e1841;
+    background-color: rgb(11, 68, 205);
     background-image: radial-gradient(
         circle 5px at 12px 12px,
         #fff 100%,

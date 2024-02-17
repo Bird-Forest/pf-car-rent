@@ -11,13 +11,8 @@ export const Backdrop = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  /* width: 900px;
-height: 900px; */
-  /* .multiple-filters {
-  backdrop-filter: blur(20px) saturate(120%) contrast(200%);
-} */
-  /* background-color: #3498db; */
-  backdrop-filter: blur(5px);
+  overflow-y: hidden;
+  backdrop-filter: blur(4px);
   background: rgba(18, 20, 23, 0.5);
 `;
 
